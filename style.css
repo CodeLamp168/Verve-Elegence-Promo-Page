@@ -28,6 +28,7 @@ body {
     padding:20px 5px;
     display:flex;
     flex-direction: column;
+
 }
 
 
@@ -72,7 +73,12 @@ body {
     }
 
     .box-2 {
-        grid-area: 6 / 2 / 11 / 4
+        grid-area: 6 / 2 / 11 / 4;
+    }
+
+    .box-2 h2 {
+        line-height:110px;
+        margin-bottom:0.3em;
     }
 
     .box-4 {
@@ -85,8 +91,38 @@ body {
 
     .box-6 {
         grid-area: 9 / 1 / 11 / 2
+    } 
+
+}
+
+@media(min-width:1440px){
+
+    .grid-area {
+        grid-template-rows:100px repeat(9, 110px);
+    }
+    .box-1 {
+        grid-area: 2 / 1 / 8 / 2;
     }
 
+    .box-2 {
+        grid-area: 2 / 2 / 5 / 4;
+    }
+
+    .box-3 {
+        grid-area: 5 / 2  / 8 / 3;
+    }
+
+    .box-4 {
+        grid-area: 5 / 3 / 8 / 4
+    }
+    
+    .box-5 {
+        grid-area: 8 / 1 / 11 / 3 
+    }
+
+    .box-6 {
+        grid-area: 8 / 3 / 11 / 4
+    }
 }
 
 

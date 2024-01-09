@@ -10,6 +10,7 @@
 :root {
     --main-text-color:#000000;
     --inverted-main-text-color:#000000;
+
 }
 body {
     background: linear-gradient(170deg, #FF004D 66.24%, rgba(126, 37, 83, 0.89) 120.75%);
@@ -18,49 +19,121 @@ body {
 
 .grid-area {
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    grid-template-rows:repeat(7, minmax(100px, auto));
-    margin:20px;
+    margin:10px;
     gap:10px;
 }
+
+
 .grid-item {
     border:1px solid black;
     padding:10px;
 }
 
 .grid-item h2 {
-    font-size:70px;
-    white-space: nowrap;
+    font-size: clamp(2.5rem, -0.625rem + 10vw, 5rem);
+
 }
 
 .grid-item p {
-    font-size:18px;
+    font-size:16px;
 }
 
-.box-1 {
-    grid-area: 1 / 1 / 6 / 2
+@media(min-width:840px){
+    .grid-area {
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-rows:repeat(6, auto) 
+    }
+
+    .box-1 {
+        grid-area: 1 / 1 / 5 / 2
+    }
+
+    .box-2 {
+        grid-area: 1 / 2 / 5 / 3
+    }
+
+    .box-2 h2 {
+        line-height:80px;
+    }
+
+    .box-3 {
+        grid-area: 5 / 1 / 6 / 2
+    }
+
+    .box-3 h2 {
+        line-height:80px;
+    }
+    
+    .box-4 {
+        grid-area: 5 / 2 / 6 / 2
+    }
+
+    .box-5 {
+        grid-area: 6 / 1 / 7 / 3
+    }
+
+    .box-5 h2 {
+        line-height:80px;
+    }
+
+    .box-6 {
+        grid-area: 7 / 1 / 8 / 3
+    }
+
+    .box-6 h2 {
+        line-height:80px;
+    }
+    
 }
 
-.box-2 {
-    grid-area: 1 / 2 / 3 / 4
-}
 
-.box-3 {
-    grid-area: 3 / 2 / 6 / 3
-}
+@media(min-width:1300px){
+    .grid-area {
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows:repeat(7, minmax(100px, auto));
+    }
 
-.box-4 {
-    grid-area: 3 / 3 / 6 / 4
-}
+    .box-1 {
+        grid-area: 1 / 1 / 6 / 2
+    }
+    
+    .box-2 {
+        grid-area: 1 / 2 / 3 / 4
+    }
 
-.box-5 {
-    grid-area: 6 / 1 / 8 / 3
-}
+    .box-2 h2 {
+        line-height:80px;
+        margin-bottom:10px;
+    }
+    
+    .box-3 {
+        grid-area: 3 / 2 / 6 / 3;
+    }
 
-.box-6 {
-    grid-area: 6 / 3 / 8  / 4
-}
+    .box-3 h2 {
+        line-height:80px;
+        margin-bottom:10px;
+    }
+    
+    .box-4 {
+        grid-area: 3 / 3 / 6 / 4
+    }
+    
+    .box-5 {
+        grid-area: 6 / 1 / 8 / 3
+    }
 
+    .box-5 h2 {
+        line-height:80px;
+        margin-bottom:5px;
+    }
+    
+    .box-6 {
+        grid-area: 6 / 3 / 8  / 4
+    }
+    
+    
+}
 
 
 

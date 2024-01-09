@@ -17,6 +17,25 @@ body {
     min-height:100vh;
 }
 
+button {
+    padding:10px;
+    width:200px;
+    font-size:20px;
+    margin-top:15px;
+    color:white;
+    background:black;
+    border:none;
+    cursor:pointer;
+}
+
+.community-list {
+    display:flex;
+    margin-top:35px;
+    gap:20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .grid-area {
     display:grid;
     margin:10px;
@@ -25,7 +44,7 @@ body {
 
 
 .grid-item {
-    border:1px solid black;
+    border:1.5px solid rgba(0, 0, 0, 0.863);
     padding:10px;
 }
 

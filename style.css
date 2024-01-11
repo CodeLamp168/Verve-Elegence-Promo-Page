@@ -11,6 +11,11 @@
     --main-text-color:#000000;
     --inverted-main-text-color:#000000;
 
+    /* animation */
+
+    --animation-duration: 600ms;
+    --animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+
 }
 body {
     background: linear-gradient(170deg, #FF004D 66.24%, rgba(126, 37, 83, 0.89) 120.75%);
@@ -41,6 +46,7 @@ button {
     display:grid;
     margin:10px;
     gap:10px;
+    overflow:hidden;
 }
 
 
@@ -230,10 +236,131 @@ button {
 }
 
 
+/* animation section */
+@media(max-width:839px){
+    .box-1 {
+        animation:box-animation-top var(--animation-duration) var(--animation-timing-function);
+    }
 
+    .box-2 {
+        animation:box-animation-right var(--animation-duration) var(--animation-timing-function);
+    }
 
+    .box-3 {
+        animation:box-animation-left var(--animation-duration) var(--animation-timing-function);
+    }
 
+    .box-4 {
+        animation:box-animation-right var(--animation-duration) var(--animation-timing-function);
+    }
 
+    .box-5 {
+        animation:box-animation-left var(--animation-duration) var(--animation-timing-function);
+    }
+    .box-6 {
+        animation:box-animation-bottom var(--animation-duration) var(--animation-timing-function);
+    }
+}
+
+@media(min-width:840px){
+
+    .box-1 {
+        animation:box-animation-left var(--animation-duration) var(--animation-timing-function);
+    }
+
+    .box-2 {
+        animation:box-animation-top var(--animation-duration) var(--animation-timing-function);
+    }
+
+    .box-3 {
+        animation:box-animation-bottom var(--animation-duration) var(--animation-timing-function);
+    }
+
+    .box-4 {
+        animation:box-animation-right var(--animation-duration) var(--animation-timing-function);
+    }
+
+    .box-5 {
+        animation:box-animation-left var(--animation-duration) var(--animation-timing-function);
+    }
+    .box-6 {
+        animation:box-animation-right var(--animation-duration) var(--animation-timing-function);
+    }
+}
+
+@media(min-width:1300px){
+
+    .box-1 {
+        animation:box-animation-top var(--animation-duration) var(--animation-timing-function);
+    }
+
+    .box-2 {
+        animation:box-animation-right var(--animation-duration) var(--animation-timing-function);
+    }
+
+    .box-3 {
+        animation:box-animation-fade-in var(--animation-duration) var(--animation-timing-function);
+    }
+
+    .box-4 {
+        animation:box-animation-right var(--animation-duration) var(--animation-timing-function);
+    }
+
+    .box-5 {
+        animation:box-animation-left var(--animation-duration) var(--animation-timing-function);
+    }
+    .box-6 {
+        animation:box-animation-bottom var(--animation-duration) var(--animation-timing-function);
+    }
+}
+
+@keyframes box-animation-left {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+@keyframes box-animation-right {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+}
+
+@keyframes box-animation-bottom {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes box-animation-top {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+@keyframes box-animation-fade-in {
+    from {
+        opacity:0.5;
+        transform:translateY(50%);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0%);
+    }
+}
 
 
 

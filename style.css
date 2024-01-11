@@ -18,6 +18,7 @@ body {
 }
 
 button {
+
     padding:10px;
     width:200px;
     font-size:20px;
@@ -49,22 +50,65 @@ button {
 }
 
 .grid-item h2 {
-    font-size: clamp(2.5rem, -0.625rem + 10vw, 5rem);
-
+    font-size: clamp(2.55rem, -0.625rem + 10vw, 5rem);
 }
 
 .grid-item p {
-    font-size:16px;
+    font-size: clamp(0.875rem, 0.7188rem + 0.5vw, 1rem);
+}
+
+@media(max-width:550px){
+    .community-list {
+        justify-content: space-around;
+    }
+
+}
+
+@media(max-width:839px){
+    .box-1 h2 {
+        line-height:50px;
+        margin-bottom:5px;
+    }
+    .box-2 h2 {
+        line-height:50px;
+        margin-bottom:10px;
+    }
+
+    .box-3 h2 {
+        line-height:50px;
+        margin-bottom:10px;
+    }
+
+    .box-5 h2 {
+        line-height:50px;
+        margin-bottom:10px;
+    }
 }
 
 @media(min-width:840px){
+
+    .content-box h2 {
+        font-size: clamp(2.75rem, 0.8967rem + 5.4348vw, 5rem);
+    }
     .grid-area {
         grid-template-columns:repeat(2, 1fr);
         grid-template-rows:repeat(6, auto) 
     }
 
+    .grid-item p {
+        font-size:16px;
+    }
+
     .box-1 {
         grid-area: 1 / 1 / 5 / 2
+    }
+
+    .box-1 p {
+        inline-size:430px;
+    }
+
+    .box-1 h2 {
+        line-height:100px;
     }
 
     .box-2 {
@@ -115,9 +159,20 @@ button {
     .box-1 {
         grid-area: 1 / 1 / 6 / 2
     }
+
+    .box-1 h2 {
+        font-size: 120px;
+        margin-bottom:20px;
+        margin-top:20px;
+    }
+
+    .box-1 p {
+        inline-size:430px;
+    }
     
     .box-2 {
         grid-area: 1 / 2 / 3 / 4
+        
     }
 
     .box-2 h2 {
@@ -133,9 +188,14 @@ button {
         line-height:80px;
         margin-bottom:10px;
     }
-    
+
     .box-4 {
         grid-area: 3 / 3 / 6 / 4
+    }
+
+    .box-4 h2 {
+        line-height:70px;
+        margin-bottom:10px;
     }
     
     .box-5 {
@@ -150,8 +210,23 @@ button {
     .box-6 {
         grid-area: 6 / 3 / 8  / 4
     }
-    
-    
+
+    br {
+        display:none;
+    }
+
+ 
+}
+
+@media(min-width:1770px){
+    .box-1 p {
+        inline-size:400px;
+    }
+
+    button {
+        position:relative;
+        top:15px;
+    }
 }
 
 

@@ -23,7 +23,7 @@ body {
 }
 
 button {
-
+    position:relative;
     padding:10px;
     width:200px;
     font-size:20px;
@@ -32,8 +32,17 @@ button {
     background:black;
     border:none;
     cursor:pointer;
+    left:10px;
 }
 
+
+button, a {
+    transition:transform 200ms ease-in;
+}
+
+button:hover, a:hover {
+    transform:scale(1.1)
+}
 .community-list {
     display:flex;
     margin-top:35px;
@@ -41,6 +50,9 @@ button {
     align-items: center;
     flex-wrap: wrap;
 }
+
+
+
 
 .grid-area {
     display:grid;
@@ -62,6 +74,8 @@ button {
 .grid-item p {
     font-size: clamp(0.875rem, 0.7188rem + 0.5vw, 1rem);
 }
+
+
 
 @media(max-width:550px){
     .community-list {
@@ -220,8 +234,6 @@ button {
     br {
         display:none;
     }
-
- 
 }
 
 @media(min-width:1770px){
@@ -230,8 +242,7 @@ button {
     }
 
     button {
-        position:relative;
-        top:15px;
+        top:35px;
     }
 }
 
@@ -361,8 +372,5 @@ button {
         transform:translateY(0%);
     }
 }
-
-
-
 
 

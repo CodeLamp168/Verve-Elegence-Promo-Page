@@ -14,6 +14,7 @@
     --background-color: #f8f8f8;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --transition-box: all 0.5s ease;
     --animation-duration: 600ms;
     --animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
 }
@@ -152,10 +153,19 @@ p {
 
 /* Animations */
 .grid-item {
-    opacity: 0;
-    animation: fade-in var(--animation-duration) var(--animation-timing-function) forwards;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: var(--transition-box);
 }
 
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.658);
+}
+
+/* you will remain until you are useful to me */
 @keyframes fade-in {
     from {
         opacity: 0;
